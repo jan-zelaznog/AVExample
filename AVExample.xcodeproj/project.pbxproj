@@ -13,6 +13,16 @@
 		3DA921D52841926F0026F443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA921D32841926F0026F443 /* Main.storyboard */; };
 		3DA921D7284192710026F443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA921D6284192710026F443 /* Assets.xcassets */; };
 		3DA921DA284192710026F443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA921D8284192710026F443 /* LaunchScreen.storyboard */; };
+		3DA921E32841936F0026F443 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA921E22841936F0026F443 /* AVFoundation.framework */; };
+		3DA921E52841939B0026F443 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA921E42841939B0026F443 /* AVKit.framework */; };
+		3DA921E7284194660026F443 /* rotoplas_cortinilla.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3DA921E6284194660026F443 /* rotoplas_cortinilla.mp4 */; };
+		3DA921E9284194EC0026F443 /* VideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA921E8284194EC0026F443 /* VideoController.swift */; };
+		3DA921EC2841A0F50026F443 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 3DA921EB2841A0F50026F443 /* YouTubeiOSPlayerHelper */; };
+		3DA921EE2841A18A0026F443 /* YTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA921ED2841A18A0026F443 /* YTViewController.swift */; };
+		3DA921F12841A71C0026F443 /* Mar_De_La_Tranquilidad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3DA921EF2841A71C0026F443 /* Mar_De_La_Tranquilidad.mp3 */; };
+		3DA921F22841A71C0026F443 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA921F02841A71C0026F443 /* AudioPlayerViewController.swift */; };
+		3DA921F62841BCFD0026F443 /* UIImageAnimatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA921F42841BCFC0026F443 /* UIImageAnimatedGIF.m */; };
+		3DA921F82841BE190026F443 /* song.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3DA921F72841BE190026F443 /* song.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,17 @@
 		3DA921D6284192710026F443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DA921D9284192710026F443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DA921DB284192710026F443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DA921E22841936F0026F443 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3DA921E42841939B0026F443 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		3DA921E6284194660026F443 /* rotoplas_cortinilla.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rotoplas_cortinilla.mp4; sourceTree = "<group>"; };
+		3DA921E8284194EC0026F443 /* VideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoController.swift; sourceTree = "<group>"; };
+		3DA921ED2841A18A0026F443 /* YTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTViewController.swift; sourceTree = "<group>"; };
+		3DA921EF2841A71C0026F443 /* Mar_De_La_Tranquilidad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mar_De_La_Tranquilidad.mp3; sourceTree = "<group>"; };
+		3DA921F02841A71C0026F443 /* AudioPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerViewController.swift; sourceTree = "<group>"; };
+		3DA921F32841BCFC0026F443 /* AVExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		3DA921F42841BCFC0026F443 /* UIImageAnimatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAnimatedGIF.m; sourceTree = "<group>"; };
+		3DA921F52841BCFD0026F443 /* UIImageAnimatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAnimatedGIF.h; sourceTree = "<group>"; };
+		3DA921F72841BE190026F443 /* song.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = song.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA921E52841939B0026F443 /* AVKit.framework in Frameworks */,
+				3DA921E32841936F0026F443 /* AVFoundation.framework in Frameworks */,
+				3DA921EC2841A0F50026F443 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +66,7 @@
 			children = (
 				3DA921CC2841926F0026F443 /* AVExample */,
 				3DA921CB2841926F0026F443 /* Products */,
+				3DA921E12841936F0026F443 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +81,12 @@
 		3DA921CC2841926F0026F443 /* AVExample */ = {
 			isa = PBXGroup;
 			children = (
+				3DA921F72841BE190026F443 /* song.gif */,
+				3DA921F52841BCFD0026F443 /* UIImageAnimatedGIF.h */,
+				3DA921F42841BCFC0026F443 /* UIImageAnimatedGIF.m */,
+				3DA921F02841A71C0026F443 /* AudioPlayerViewController.swift */,
+				3DA921EF2841A71C0026F443 /* Mar_De_La_Tranquilidad.mp3 */,
+				3DA921E6284194660026F443 /* rotoplas_cortinilla.mp4 */,
 				3DA921CD2841926F0026F443 /* AppDelegate.swift */,
 				3DA921CF2841926F0026F443 /* SceneDelegate.swift */,
 				3DA921D12841926F0026F443 /* ViewController.swift */,
@@ -63,8 +94,20 @@
 				3DA921D6284192710026F443 /* Assets.xcassets */,
 				3DA921D8284192710026F443 /* LaunchScreen.storyboard */,
 				3DA921DB284192710026F443 /* Info.plist */,
+				3DA921E8284194EC0026F443 /* VideoController.swift */,
+				3DA921ED2841A18A0026F443 /* YTViewController.swift */,
+				3DA921F32841BCFC0026F443 /* AVExample-Bridging-Header.h */,
 			);
 			path = AVExample;
+			sourceTree = "<group>";
+		};
+		3DA921E12841936F0026F443 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DA921E42841939B0026F443 /* AVKit.framework */,
+				3DA921E22841936F0026F443 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +126,9 @@
 			dependencies = (
 			);
 			name = AVExample;
+			packageProductDependencies = (
+				3DA921EB2841A0F50026F443 /* YouTubeiOSPlayerHelper */,
+			);
 			productName = AVExample;
 			productReference = 3DA921CA2841926F0026F443 /* AVExample.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +145,7 @@
 				TargetAttributes = {
 					3DA921C92841926F0026F443 = {
 						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -111,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 3DA921C12841926F0026F443;
+			packageReferences = (
+				3DA921EA2841A0F50026F443 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+			);
 			productRefGroup = 3DA921CB2841926F0026F443 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +176,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DA921DA284192710026F443 /* LaunchScreen.storyboard in Resources */,
+				3DA921F82841BE190026F443 /* song.gif in Resources */,
+				3DA921F12841A71C0026F443 /* Mar_De_La_Tranquilidad.mp3 in Resources */,
 				3DA921D7284192710026F443 /* Assets.xcassets in Resources */,
+				3DA921E7284194660026F443 /* rotoplas_cortinilla.mp4 in Resources */,
 				3DA921D52841926F0026F443 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA921F62841BCFD0026F443 /* UIImageAnimatedGIF.m in Sources */,
 				3DA921D22841926F0026F443 /* ViewController.swift in Sources */,
 				3DA921CE2841926F0026F443 /* AppDelegate.swift in Sources */,
+				3DA921F22841A71C0026F443 /* AudioPlayerViewController.swift in Sources */,
 				3DA921D02841926F0026F443 /* SceneDelegate.swift in Sources */,
+				3DA921EE2841A18A0026F443 /* YTViewController.swift in Sources */,
+				3DA921E9284194EC0026F443 /* VideoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +342,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E9KS5E39JS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AVExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -294,14 +353,17 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.funam.dti.AVExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddam.audioo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AVExample/AVExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,8 +374,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E9KS5E39JS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AVExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -321,14 +385,16 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.funam.dti.AVExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddam.audioo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AVExample/AVExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -356,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DA921EA2841A0F50026F443 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DA921EB2841A0F50026F443 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DA921EA2841A0F50026F443 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DA921C22841926F0026F443 /* Project object */;
 }
