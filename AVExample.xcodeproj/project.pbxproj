@@ -23,6 +23,7 @@
 		3DA921F22841A71C0026F443 /* AudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA921F02841A71C0026F443 /* AudioPlayerViewController.swift */; };
 		3DA921F62841BCFD0026F443 /* UIImageAnimatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA921F42841BCFC0026F443 /* UIImageAnimatedGIF.m */; };
 		3DA921F82841BE190026F443 /* song.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3DA921F72841BE190026F443 /* song.gif */; };
+		3DA921FA284266550026F443 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA921F9284266550026F443 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		3DA921F42841BCFC0026F443 /* UIImageAnimatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAnimatedGIF.m; sourceTree = "<group>"; };
 		3DA921F52841BCFD0026F443 /* UIImageAnimatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageAnimatedGIF.h; sourceTree = "<group>"; };
 		3DA921F72841BE190026F443 /* song.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = song.gif; sourceTree = "<group>"; };
+		3DA921F9284266550026F443 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			files = (
 				3DA921E52841939B0026F443 /* AVKit.framework in Frameworks */,
 				3DA921E32841936F0026F443 /* AVFoundation.framework in Frameworks */,
+				3DA921FA284266550026F443 /* MediaPlayer.framework in Frameworks */,
 				3DA921EC2841A0F50026F443 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +107,7 @@
 		3DA921E12841936F0026F443 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DA921F9284266550026F443 /* MediaPlayer.framework */,
 				3DA921E42841939B0026F443 /* AVKit.framework */,
 				3DA921E22841936F0026F443 /* AVFoundation.framework */,
 			);
@@ -359,7 +363,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddam.audioo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddam.audio2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "AVExample/AVExample-Bridging-Header.h";
@@ -391,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddam.audioo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddam.audio2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "AVExample/AVExample-Bridging-Header.h";

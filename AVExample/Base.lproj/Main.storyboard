@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usf-83-6YA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1482" y="101"/>
+            <point key="canvasLocation" x="-1554" y="151"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="91f-tl-cQ1">
@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9XX-hf-fb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-796" y="157"/>
+            <point key="canvasLocation" x="-794" y="151"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="151"/>
+            <point key="canvasLocation" x="-58" y="151"/>
         </scene>
         <!--AV Player View Controller-->
         <scene sceneID="IiK-dh-p87">
@@ -59,7 +59,7 @@
                 <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="y0u-JC-41v" customClass="VideoController" customModule="AVExample" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggx-pN-4YQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="522" y="146"/>
+            <point key="canvasLocation" x="706" y="151"/>
         </scene>
     </scenes>
     <resources>

@@ -8,6 +8,7 @@
 import UIKit
 import AVKit
 import AVFoundation
+import MediaPlayer
 
 class AudioPlayerViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer = AVAudioPlayer()
@@ -15,9 +16,82 @@ class AudioPlayerViewController: UIViewController, AVAudioPlayerDelegate {
     let s1 = UISlider ()
     var timer:Timer?
     
+    // Reproducir
+    // Se utiliza una referencia débil o "sin dueño" para evitar un retain cycle
+    // Garbage-Collector != ARC (automatic reference counting)
+    // [weak self]
+    // [unowned self]
+    func conectarControlCenter () {
+        let controlCenter = MPRemoteCommandCenter.shared()
+        controlCenter.playCommand.addTarget { [unowned self] event in
+            
+            if self.audioPlayer.isPlaying {
+                return .commandFailed
+            }
+            self.audioPlayer.play()
+            return .success
+        }
+        // Detener
+        controlCenter.pauseCommand.addTarget { event in
+            if self.audioPlayer.isPlaying {
+                self.audioPlayer.stop()
+                return .success
+            }
+            return .commandFailed
+        }
+    }
+    
+    func inicializarCCInfo() {
+        let titulo = archivoAudio.replacingOccurrences(of: "_", with: " ")
+        var infoDict = [String : Any]()
+        infoDict[MPMediaItemPropertyTitle] = titulo
+        infoDict[MPMediaItemPropertyPlaybackDuration] = audioPlayer.duration
+        infoDict[MPNowPlayingInfoPropertyElapsedPlaybackTime] = audioPlayer.currentTime
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = infoDict
+    }
+    
+    func actualizaCCInfo() {
+        if var infoDict = MPNowPlayingInfoCenter.default().nowPlayingInfo {
+            infoDict[MPNowPlayingInfoPropertyElapsedPlaybackTime] = audioPlayer.currentTime
+            var pausado = 0
+            if audioPlayer.isPlaying {
+                pausado = 1
+            }
+            infoDict[MPNowPlayingInfoPropertyPlaybackRate] = pausado
+            MPNowPlayingInfoCenter.default().nowPlayingInfo = infoDict
+        }
+    }
+    
+    @objc func manejaInterrupcion(_ notif : Notification) {
+        guard let info = notif.userInfo,
+              let valor = info[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let tipo = AVAudioSession.InterruptionType(rawValue: valor)
+        else {
+            return
+        }
+        if tipo == .began {
+            // que hago cuando inicia la interrupción?
+            self.stop()
+        }
+        else if tipo == .ended {
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+                self.play()
+            }
+            catch {
+                
+            }
+        }
+    }
+    
+    func activarNotificacion () {
+        NotificationCenter.default.addObserver(self, selector:#selector(manejaInterrupcion(_ :)), name: AVAudioSession.interruptionNotification, object: nil)
+    }
+    
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         // si la reproducción ya se acabó, anulamos el timer
         timer?.invalidate()
+        NotificationCenter.default.removeObserver(self)
     }
     
     func cargarAudio() {
@@ -35,6 +109,9 @@ class AudioPlayerViewController: UIViewController, AVAudioPlayerDelegate {
             audioPlayer.volume = 0.5
             s1.maximumValue = Float(audioPlayer.duration)
             timer = Timer.scheduledTimer(timeInterval:1.0, target:self, selector:#selector(actualizaSlider), userInfo:nil, repeats:true)
+            conectarControlCenter()
+            inicializarCCInfo()
+            activarNotificacion()
         }
         catch {
             print ("ocurrió un error con el audio \(error.localizedDescription)")
@@ -110,21 +187,33 @@ class AudioPlayerViewController: UIViewController, AVAudioPlayerDelegate {
     @objc func actualizaSlider() {
         let posicion = audioPlayer.currentTime
         s1.value = Float(posicion)
+        actualizaCCInfo()
     }
     
     @objc func botonPlayTouch(_ sender:UIButton!) {
+        play()
+    }
+    
+    func play () {
         print("tocaste el botón Play")
         audioPlayer.play()
+        actualizaCCInfo()
     }
     
     @objc func botonStopTouch(_ sender:UIButton!) {
+        stop()
+    }
+    
+    func stop() {
         print("tocaste el botón Stop")
         audioPlayer.stop()
+        actualizaCCInfo()
     }
     
     @objc func slider1Touch(_ sender:UISlider!) {
         print("slider reproducción se ajustó en \(sender.value)")
         audioPlayer.currentTime = Double(sender.value)
+        actualizaCCInfo()
     }
     
     @objc func slider2Touch(_ sender:UISlider!) {
